@@ -7,12 +7,16 @@ Release: 1%{?dist}
 
 License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 Url:     http://www.qt.io
-%global majmin %(echo %{version} | cut -d. -f1-2)
 Source0: %{name}-%{version}.tar.bz2
+
+%{?opt_qt5_default_filter}
 
 BuildRequires: make
 BuildRequires: opt-qt5-qtbase-devel >= %{qt_version}
 BuildRequires: opt-qt5-qtdeclarative-devel >= %{qt_version}
+%{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
+Requires:opt-qt5-qtdeclarative >= %{qt_version}
+Requires:opt-qt5-qtbase-gui >= %{qt_version}
 
 %description
 Qt Charts module provides a set of easy to use chart components. It uses the Qt Graphics View Framework, therefore charts can be easily
