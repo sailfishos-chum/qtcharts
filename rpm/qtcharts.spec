@@ -1,8 +1,8 @@
-%global qt_version 5.15.8
+%global qt_version 5.15.9
 
 Summary: Qt5 - Charts component
 Name:    opt-qt5-qtcharts
-Version: 5.15.8
+Version: 5.15.9
 Release: 1%{?dist}
 
 License: LGPL-3.0-only OR GPL-3.0-only WITH Qt-GPL-exception-1.0
